@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<title>Program Angka</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="extra.css">
+<body>
+
+<div class="w3-container"></div>
+
+<div class="w3-bar w3-black">
+  <button class="w3-bar-item w3-button" onclick="openCity('angka7_grup')">Pengecekan Angka 7</button>
+  <button class="w3-bar-item w3-button" onclick="openCity('array_grup')">Pengecekan Array</button>
+</div>
+
+<div id="angka7_grup" class="w3-container city">
+  <h2>Pengecekan Angka 7</h2>
+    <input type="number" id="angka7" name="angka7" value="" placeholder="Masukkan angka..">
+    <button class="button button2" onclick="cekangka7()">Tampilkan</button>
+  
+  <div id="modal_angka7" class="w3-modal">
+    <div class="w3-modal-content">
+        <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('modal_angka7').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Hasil</h2>
+        </header>
+            <div class="w3-container">
+                <br>
+                <p id="input_7"></p>
+                <p id="hasil"></p>
+        <br>
+      </div>
+
+    </div>
+  </div>
+  
+</div>
+
+<div id="array_grup" class="w3-container city" style="display:none">
+  <h2>Pengecekan Array</h2>
+  <p>Array : [3,7,1,2,6,7,8,9,12,5,3,12]</p> 
+  <button class="button button2" onclick="nilaisama()">Cek nilai yang sama</button>
+  <button class="button button2" onclick="urutan()">Urutkan nilai array</button>
+  <div id="modal_nilai_sama" class="w3-modal">
+    <div class="w3-modal-content">
+        <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('modal_nilai_sama').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Hasil</h2>
+        </header>
+            <div class="w3-container">
+                <br>
+                <p id="hasil_nilai_sama"></p>
+        <br>
+      </div>
+    </div>
+  </div>
+  <div id="modal_urutan" class="w3-modal">
+    <div class="w3-modal-content">
+        <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('modal_urutan').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Hasil</h2>
+        </header>
+            <div class="w3-container">
+                <br>
+                <p id="hasil_urutan"></p>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js.js"></script>
+
+</body>
+</html>
